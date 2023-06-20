@@ -12,11 +12,11 @@ const initialState = {
 //createSlice(name,intialState,reducer)
 const userSlice = createSlice({
     name: "user",
-    initialState,
-    extraReducer : (builder) => {
+    initialState ,
+    extraReducers : (builder) => {
         builder.addCase(createUser.fulfilled, (state,action) => {})
         .addCase(readUser.fulfilled, (state,action) => {
-            console.log('reducer data =', action.payload)
+           console.log('reducer data =', action.payload)
             state.users = action.payload
         })
         .addCase(updateUser.fulfilled, (state,action) => {})
